@@ -23,15 +23,15 @@
 ```
 **若页面环境没有amd, umd 的访问机制， 也可以通过`window.pocket`访问**
 ## pocket的js库介绍
-* [Common]('') : 封装了一些通用的方法
-* [Array]('') :  基于数组的一些常用方法的封装和polyfill
-* [Date]('') : 基于日期的一些常用方法的封装和polyfill
-* [Function]('') : 基于方法的一些常用方法的封装和polyfill
-* [Number]('') : 基于Number的一些常用方法的封装和polyfill
-* [Object]('') : 基于Object的一些常用方法的封装和polyfill
-* [Regexp]('') : 基与正则表达式的一些常用方法的封装和polyfill
-* [String]('') : 基于字符串的一些常用方法的封装和polyfill
-* [Struts]('') : 基于一些常用结构的一些常用方法的封装和polyfill
+* [Common](./documents/Common.md) : 封装了一些通用的方法
+* [Array](./documents/Array.md) :  基于数组的一些常用方法的封装和polyfill
+* [Date](./documents/Date.md) : 基于日期的一些常用方法的封装和polyfill
+* [Function](./documents/Function.md) : 基于方法的一些常用方法的封装和polyfill
+* [Number](./documents/Number.md) : 基于Number的一些常用方法的封装和polyfill
+* [Object](./documents/Object.md) : 基于Object的一些常用方法的封装和polyfill
+* [Regexp](./documents/Regexp.md) : 基与正则表达式的一些常用方法的封装和polyfill
+* [String](./documents/String.md) : 基于字符串的一些常用方法的封装和polyfill
+* [Struts](./documents/Struts.md) : 基于一些常用结构的一些常用方法的封装和polyfill
 
 ## pocket 的自带方法的说明
 
@@ -47,7 +47,7 @@
 
 ## pocket-library 写法：
 * es6:
-```
+```javascript
     Class LibraryName {
 
         static methodName() {
@@ -63,7 +63,7 @@
 ```
 
 * es5:
-```
+```javascript
     var libray = function() {};
 
     library.staticMethodName = function() {

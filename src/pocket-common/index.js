@@ -30,9 +30,9 @@ export default class Common {
         let firstArg = argumentsArray[0];
 
         if(Common.isType(firstArg, 'String')) {
-            return _String.includesStr.apply(void 0, argumentsArray);
+            return _String.includes.apply(void 0, argumentsArray);
         } else if (Common.isType(firstArg, 'Array')) {
-            return _Array.includesArray.apply(void 0, argumentsArray);
+            return _Array.includes.apply(void 0, argumentsArray);
         }
 
     }

@@ -80,7 +80,7 @@ export default class _String {
      * @param searchStr
      * @param startIndex
      */
-    static includesStr(str, searchStr = void 0, startIndex = 0) {
+    static includes(str, searchStr = void 0, startIndex = 0) {
         if(searchStr === void 0) {
             return false;
         }
@@ -117,7 +117,7 @@ export default class _String {
     }
 
 
-    static excludePolyfill() {
+    static exclude() {
         return [
             'includes'
         ]
@@ -132,6 +132,7 @@ export default class _String {
             'padEnd',
             'startWith',
             'endWith',
+            'includes'
         ];
 
         polyfills.forEach(polyfill => {

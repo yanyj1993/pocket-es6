@@ -75,7 +75,7 @@ export default class _Array {
         return array;
     }
 
-    static includesArray(array, includeItem, start = 0, end = array.length) {
+    static includes(array, includeItem, start = 0, end = array.length) {
 
         return _Array.findIndex(array.slice(start, end + 1), item => _Object.is(item, includeItem))  !== -1;
     }
@@ -105,7 +105,7 @@ export default class _Array {
         return toArray.concat(fromArray);
     }
 
-    static excludePolyfill() {
+    static exclude() {
         return [
             'includes'
         ]

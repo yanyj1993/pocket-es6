@@ -41,7 +41,7 @@ export default class Pocket {
 
 
     static attach(library) {
-        let excludePolyfills = library.excludePolyfill ? library.excludePolyfill() : [];
+        let excludePolyfills = library.exclude ? library.exclude() : [];
         Object.getOwnPropertyNames(library).forEach((key) => {
             if(_Function.isFunction(library[key])) {
                 if(key === 'polyfill') {
