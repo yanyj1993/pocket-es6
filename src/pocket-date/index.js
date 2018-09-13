@@ -1,7 +1,15 @@
 import Common from '../pocket-common';
 
-export default class _Array {
-    static isArray(arg) {
-        return Common.is(arg, 'Array')
+export default class _Date {
+    static isDate(arg) {
+        return Common.isType(arg, 'Date')
+    }
+
+    /**
+     *   获取当前时间戳
+     * @returns {number}
+     */
+    static now() {
+        return +new Date();
     }
 }

@@ -1,7 +1,7 @@
 import Common from '../pocket-common';
 
-export default class _Object {
-    static isObject(arg) {
-        return Common.is(arg, 'Object')
+export default class _RegExp {
+    static isRegExp(arg) {
+        return Common.isType(arg, 'RegExp')
     }
 }

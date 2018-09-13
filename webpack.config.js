@@ -1,11 +1,15 @@
+const path = require('path');
 
 module.exports = {
     devtool: '#source-map',
     mode: 'production',
-    entry: './static/js/modules/common/index.js',  //入口文件
+    entry: {
+        pocket: './src/index.js',
+        'pocket-ua': './src/index-ua.js',
+    },  //入口文件
     output: {  //输出文件路径设置
-        path: __dirname,
-        filename: './static/js/dist/map-common.js',
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].js',
     },
     module: {
         rules: [{
@@ -13,5 +17,7 @@ module.exports = {
             exclude: /node_modules/,
             loader: 'babel-loader'
         }]
-    }
+    },
+    plugins: [
+    ]
 };
