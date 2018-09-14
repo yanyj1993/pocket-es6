@@ -11,7 +11,7 @@ export default class _Number {
      * @returns {boolean}
      */
     static isInfinity(number) {
-        return number === Infinity;
+        return number === Infinity || number === -Infinity;
     }
 
     /**
@@ -28,7 +28,7 @@ export default class _Number {
      * @param number
      * @returns {number}
      */
-    static trunc(number) {
+    static truncate(number) {
 
         if(isNaN(Number(number))) {
             return NaN;

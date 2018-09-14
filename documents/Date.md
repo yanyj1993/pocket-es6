@@ -19,4 +19,4 @@
                 * `时`: `H` 或者 `hours`
                 * `分`: `m` 或者 `minutes`
                 * `秒`: `s` 或者 `seconds`
-            * *`numbers[Number]`*: 表示要移动的时间段，正数为加， 负数为间减
+            * *`numbers[Number]`*: 表示要移动的时间段，正数为加， 负数为减
