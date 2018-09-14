@@ -1,5 +1,5 @@
 # Pocket-Common
-[返回](../Readme.md)
+[返回](../)
 ## methods:
 
 * `getGlobalObject() [globalThis]`: 获取当前的全局对象
