@@ -32,6 +32,7 @@
 * [Regexp](./documents/Regexp.md) : 基与正则表达式的一些常用方法的封装和polyfill
 * [String](./documents/String.md) : 基于字符串的一些常用方法的封装和polyfill
 * [Struts](./documents/Struts.md) : 基于一些常用结构的一些常用方法的封装和polyfill
+* [Utils](./documents/Utils.md) : 基于一些常用工具的封装
 
 ## pocket 的自带方法的说明
 
