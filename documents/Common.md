@@ -1,5 +1,6 @@
 # Pocket-Common
-[返回](https://github.com/yanyj1993/pocket-es6)
+[返回](https://github.com/yanyj1993/pocket-es6)<br>
+[查看源码](../src/pocket-common/index.js)
 ## methods:
 
 * `getGlobalObject() [globalThis]`: 获取当前的全局对象

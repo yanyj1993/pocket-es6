@@ -43,8 +43,8 @@ class Moment {
         this._date = Moment.parse2Date(date, format);
     }
 
-    format() {
-        return Moment.format(this._date);
+    format(formatStr) {
+        return Moment.format(this._date, formatStr);
     }
 
     /**
