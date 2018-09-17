@@ -8,3 +8,5 @@
 * `padStart(str, length, endStr = ' ') [String]`: 用指定字符串填充字符串开头
 * `padEnd(str, length, endStr = ' ') [String]`: 用指定字符串填充字符串末尾
 * `includes(str, searchStr = void 0, startIndex = 0) [Boolean]`: 从指定位置查询字符串是否包含指定的字符
+* `startWith(str, searchStr = void 0, startIndex = 0) [Boolean]`: 判断字符串是否是从指定位置指定子串开始的
+* `endWith(str, searchStr = void 0, startIndex = 0) [Boolean]`: 判断字符串是否是从指定位置指定子串结束的
