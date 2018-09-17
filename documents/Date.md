@@ -11,7 +11,7 @@
         * `constructor(date, format) []`:  构造函数, 将日期或者日期字符串转换成封装的Moment对象
         * `format(formatStr) [String]`:  将日期转换成指定格式的
         * `date() [Date]`:  返回内置的Date对象
-        * `move(type, numbers) [Moment]`:  将Date移动指定的时间段
+        * `elapse(type, numbers) [Moment]`:  将Date推移指定的时间
             * *`type[String]`*:表示要移动的时间类型，具体表示如下：
                 * `年`: `y` 或者 `years`
                 * `月`: `M` 或者 `months`

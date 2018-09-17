@@ -55,7 +55,13 @@ class Moment {
         return this._date;
     }
 
-    move(type, numbers) {
+    /**
+     *  移动到指定的时间
+     * @param type
+     * @param numbers
+     * @returns {Moment}
+     */
+    elapse(type, numbers) {
 
         if(type === 'y' || type === 'years') { // years
             this._date.setFullYear(this._date.getFullYear() + numbers);

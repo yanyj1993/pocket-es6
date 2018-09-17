@@ -1,4 +1,7 @@
 const path = require('path');
+// const PrepackWebpackPlugin = require('prepack-webpack-plugin').default;
+//
+// const configuration = {};
 
 module.exports = {
     devtool: '#source-map',
@@ -19,5 +22,6 @@ module.exports = {
         }]
     },
     plugins: [
+        // new PrepackWebpackPlugin(configuration)
     ]
 };

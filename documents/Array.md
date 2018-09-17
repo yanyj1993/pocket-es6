@@ -11,3 +11,7 @@
 * `fill(array, fillItem, start = 0, end = array.length) [Array]` : 从指定位置填充数组
 * `includes(array, includeItem, start = 0, end = array.length) [Boolean]` : 从数组指定位置查找是否包含指定项
 * `copy(fromArray, toArray) [Array]` : 将`fromArray`中的项拷贝到`toArray`中
+* `filter(filterArray, func, thisArg = void 0) [Array]` : 过滤数组
+* `union(array1, array2) [Array]` : 求数组并集
+* `intersection(array1, array2) [Array]` : 求数组交集
+* `difference(array1, array2) [Array]` : 求数组差集
