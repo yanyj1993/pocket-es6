@@ -17,7 +17,7 @@ export default class Set {
      * @returns {Set}
      */
     add(item) {
-        if(!_Array.includesArray(this._data, item)) {
+        if(!_Array.includes(this._data, item)) {
             this._data.push(item);
             this.size++;
         }

@@ -10,3 +10,4 @@
 * `findIndex(array, func, self) [Number]`: 返回`array`中符合`func`条件的第一项的下标， 若没有匹配项则返回`-1`
 * `fill(array, fillItem, start = 0, end = array.length) [Array]` : 从指定位置填充数组
 * `includes(array, includeItem, start = 0, end = array.length) [Boolean]` : 从数组指定位置查找是否包含指定项
+* `copy(fromArray, toArray) [Array]` : 将`fromArray`中的项拷贝到`toArray`中

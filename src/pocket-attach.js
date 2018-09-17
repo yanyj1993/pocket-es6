@@ -15,6 +15,7 @@ import _Dom from './pocket-dom'
 import Set from './pocket-structs/pocket-Set';
 import Map from './pocket-structs/pocket-Map';
 import Coordinate from "./pocket-utils/coordinate";
+import Url from "./pocket-utils/url";
 
 
 
@@ -56,6 +57,9 @@ Pocket.package('Dom', _Dom);
 /*utils*/
 // 坐标转换的封装方法
 Pocket.package('Coordinate', Coordinate);
+
+// url
+Pocket.package('Url', Url);
 
 //Set
 Pocket.add('Set', Set);

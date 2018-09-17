@@ -2,7 +2,7 @@ import _Array from './index';
 
 
 test('will be true', () => {
-    expect(_Array.includesArray([1,2], 2)).toBe(true);
+    expect(_Array.includes([1,2], 2)).toBe(true);
 });
 
 
