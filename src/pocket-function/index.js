@@ -13,7 +13,7 @@ export default class _Function {
      * @param {boolean} immediate 是否立即执行
      * @description 参考 [https://yuchengkai.cn/docs/zh/frontend/#%E9%98%B2%E6%8A%96] 写法
      */
-    debounce(func, wait = 50, immediate = true) {
+    static debounce(func, wait = 50, immediate = true) {
 
         let timer, context, args;
 
@@ -57,7 +57,7 @@ export default class _Function {
      *                                两者不能共存，否则函数不能执行
      * @return {function}             返回客户调用函数
      */
-    throttle(func, wait, options) {
+    static throttle(func, wait, options) {
         let context, args, result;
         let timeout = null;
         // 之前的时间戳
@@ -112,4 +112,95 @@ export default class _Function {
             return result;
         };
     };
+
+    /**
+     * 函数柯里化
+     * @param func
+     * @param args
+     * @returns {function(): *}
+     */
+    static curry(func, ...args) {
+
+        return function () {
+            return func.apply(void 0, args.concat(Common.argsToArray(arguments)));
+        }
+    }
+
+    /**
+     *  作用域绑定
+     * @param func
+     * @param bindThisArg
+     * @returns {*}
+     */
+    static bind(func, bindThisArg) {
+
+        // 参数检查
+        if (typeof this !== 'function') {
+            // closest thing possible to the ECMAScript 5
+            // internal IsCallable function
+            throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
+        }
+
+        if(Function.prototype.bind) {
+            return func.bind(bindThisArg);
+        }
+
+
+        // polyfill MDN
+        let aArgs   = Array.prototype.slice.call(arguments, 2),
+            fToBind = func,
+            fNOP    = function() {},
+            fBound  = function() {
+                // this instanceof fNOP === true时,说明返回的fBound被当做new的构造函数调用
+                return fToBind.apply(func instanceof fNOP
+                    ? func
+                    : bindThisArg,
+                    // 获取调用时(fBound)的传参.bind 返回的函数入参往往是这么传递的
+                    aArgs.concat(Array.prototype.slice.call(arguments)));
+            };
+
+        // 维护原型关系
+        if (func.prototype) {
+            // Function.prototype doesn't have a prototype property
+            fNOP.prototype = func.prototype;
+        }
+        // 下行的代码使fBound.prototype是fNOP的实例,因此
+        // 返回的fBound若作为new的构造函数,new生成的新对象作为this传入fBound,新对象的__proto__就是fNOP的实例
+        fBound.prototype = new fNOP();
+
+        return fBound;
+
+    }
+
+    static exclude() {
+        return [
+
+        ]
+    }
+
+    static polyfill() {
+        const  staticPolyfill = [
+
+        ];
+
+
+        const prototypePolyfills = [
+            'bind',
+        ];
+
+        prototypePolyfills.forEach(polyfill => {
+            Function.prototype[polyfill] = Function.prototype[polyfill] || function () {
+                return _Function[polyfill].apply(void 0, Common.argsToArray(arguments))
+            }
+        });
+
+
+
+        staticPolyfill.forEach(polyfill => {
+            Function[polyfill] = Function[polyfill] || function () {
+                return _Function[polyfill].apply(void 0, [this].concat(Common.argsToArray(arguments)))
+            }
+        });
+
+    }
 }
